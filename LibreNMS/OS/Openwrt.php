@@ -110,7 +110,7 @@ class Openwrt extends OS implements
         $legacyParts = preg_split('/\s+/', $interface, 2) ?: [];
 
         if (count($legacyParts) === 2) {
-            [$key, $value] = array_map(trim(...), $legacyParts);
+            [$key, $value] = array_map('trim', $legacyParts);
 
             if ($key !== '' && $value !== '') {
                 return [$key, $value];

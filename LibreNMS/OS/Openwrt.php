@@ -109,7 +109,6 @@ class Openwrt extends OS implements
         // Legacy wlInterfaces.txt style with whitespace separator.
         $legacyParts = preg_split('/\s+/', $interface, 2) ?: [];
 
-
         if (count($legacyParts) === 2) {
             [$key, $value] = array_map(trim(...), $legacyParts);
 
